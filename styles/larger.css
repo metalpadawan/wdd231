@@ -1,0 +1,47 @@
+@media screen and (min-width: 640px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    nav li {
+      border-top: none;
+    }
+  
+    nav a {
+      padding: 1rem 2rem;
+    }
+  
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  
+    .cert-grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .cert-grid button {
+      flex: 1 1 30%;
+    }
+  
+    header {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    footer {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  

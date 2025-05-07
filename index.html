@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- runs the js from the top instead of the bottom "defer" -->
 <script src="scripts/navigation.js" defer></script>
 <script src="scripts/date.js" defer></script>
 <script src="scripts/course.js" defer></script>
@@ -9,6 +10,7 @@
     <meta name="description" content="Calabar Chamber of Commerce official site—discover business opportunities, local resources, and join our growing network.">
     <meta name="author" content="Ndem Emmanuel">
     <title>Calabar Chamber of Commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
@@ -16,25 +18,36 @@
 
 <body>
     <header>
-        <h1>Calabar Chamber of Commerce</h1>
+          <img src="images/your-photo.jpg" alt="Your Name" width="50" height="50">
+          <span>Your Name</span>        
       </header>
     
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html">Join</a></li>
+          <li><a href="chamber.html">Chamber</a></li>
+          <li><a href="final.html">Final</a></li>
+          <li><a href="join.html">Github Profile</a></li>
+          <li><a href="linkedin.html">Linkedin</a></li>
         </ul>
       </nav>
     
       <main>
-        <h2>Welcome to Calabar Chamber of Commerce</h2>
-        <p>Explore local businesses and opportunities in Calabar.</p>
+        <h1>Home</h1>
+        <section>
+          <h2></h2>
+        </section>
+        <section>
+          <h2></h2>
+        </section>
+        <section>
+          <h2></h2>
+        </section>
       </main>
     
       <footer>
-        <p>&copy; 2025 Calabar Chamber of Commerce | Your Name Here</p>
+        <p>&copy; <span id="currentyear"></span> Your Name, Cross River State, Nigeria</p>
+        <p id="lastModified"></p>
       </footer>
 </body>
 
