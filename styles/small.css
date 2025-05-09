@@ -1,159 +1,188 @@
-/* Normalize + Base */
+/* Base styles for small screens (mobile-first) */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: #fff;
-    color: #222;
-    line-height: 1.6;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  header {
-    background-color: #084c61;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  header img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 1rem;
-  }
-  
-  header span {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  /* Navigation */
-  nav {
-    background-color: #000;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  nav li {
-    border-top: 1px solid #222;
-  }
-  
-  nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    background-color: #444;
-  }
-  
-  /* Main Layout */
-  main {
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-    color: #084c61;
-    margin-bottom: 1rem;
-  }
-  
-  /* Card Sections */
-  section {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  section h2 {
-    background-color: #084c61;
-    color: white;
-    margin: 0;
-    padding: 0.75rem 1rem;
-    font-size: 1.2rem;
-  }
-  
-  /* Certificate Buttons */
-  .cert-section {
-    padding: 1rem;
-  }
-  
-  .filter-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-  }
-  
-  .filter-buttons button {
-    background-color: #000;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cert-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .cert-grid button {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .cert-grid button.cse {
-    background-color: #5d2c1d;
-    color: white;
-  }
-  
-  .cert-grid button.wdd {
-    background-color: #dcdcdc;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #084c61;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  footer p {
-    margin: 0.3rem 0;
-  }
-  
-  #lastModified {
-    color: #a1f06a;
-    font-size: 0.8rem;
-  }
-  
-  /* Prevent text touching edges */
-  body, main, header, nav, footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header styles */
+header {
+  background: #084c61;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* UPDATED: Stack logo + name vertically for center */
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem; /* UPDATED: Add spacing between image and name */
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+header span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Hamburger menu button */
+#menuToggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Hide/show nav for mobile */
+nav.hidden {
+  display: none;
+}
+
+nav.show {
+  display: block;
+}
+
+/* Navigation menu */
+nav {
+  background: #000;
+  display: block; /* UPDATED: Always show nav in small view */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li {
+  border-top: 1px solid #222;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #444;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #084c61;
+  margin-bottom: 1rem;
+}
+
+/* Card sections for mobile */
+section {
+  background: #f9f9f9;
+  border-radius: 10px; /* UPDATED: Add rounded corners */
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* UPDATED: Prevent overflow */
+  padding: 1rem;
+}
+
+section h2 {
+  background: #084c61;
+  color: white;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 1.2rem;
+  border-top-left-radius: 10px; /* UPDATED: Curved header corners */
+  border-top-right-radius: 10px;
+}
+
+/* Filter and certificate grid */
+.cert-section {
+  padding: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cert-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cert-grid button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cert-grid .cse {
+  background-color: #5d2c1d;
+  color: white;
+}
+
+.cert-grid .wdd {
+  background-color: #dcdcdc;
+}
+
+/* Footer */
+footer {
+  background: #084c61;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  color: #a1f06a;
+  font-size: 0.8m;
+}
+
+#lastModified {
+  font-size: 0.8rem;
+  color: #a1f06a;
+}
+
+/* Padding fix to prevent edge contact */
+body, main, header, nav, footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

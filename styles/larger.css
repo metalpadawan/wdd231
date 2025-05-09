@@ -1,47 +1,89 @@
 @media screen and (min-width: 640px) {
-    nav ul {
-      flex-direction: row;
-      justify-content: center;
-    }
-  
-    nav li {
-      border-top: none;
-    }
-  
-    nav a {
-      padding: 1rem 2rem;
-    }
-  
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-  
-    .card-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-  
-    .cert-grid {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    .cert-grid button {
-      flex: 1 1 30%;
-    }
-  
-    header {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  
-    footer {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
   }
-  
+
+  nav li {
+    border-top: none;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 60% 40%; /* UPDATED: Course Work now 60%, Calabar 40% */
+    gap: 1rem;
+  }
+
+  .cert-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .cert-grid button {
+    flex: 1 1 30%;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  nav {
+    display: block !important; /* UPDATED: Force nav to always show in desktop */
+  }
+
+  header,
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* UPDATED: Header layout for image + name side by side */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-center {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* UPDATED: Ensure section headers stretch full width and no padding gaps */
+  section h2 {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #084c61;
+    color: white;
+  }
+
+  section {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  section > *:not(h2) {
+    padding: 1rem; /* Put padding inside section content, not header */
+  }
+
+  /* UPDATED: Add black underline to filter buttons */
+  .filter-buttons button {
+    border-bottom: 2px solid black;
+  }
+}

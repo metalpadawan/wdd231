@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- runs the js from the top instead of the bottom "defer" -->
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/date.js" defer></script>
-<script src="scripts/course.js" defer></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calabar Chamber of Commerce official site—discover business opportunities, local resources, and join our growing network.">
     <meta name="author" content="Ndem Emmanuel">
-    <title>Calabar Chamber of Commerce</title>
+    <title>Course Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
+    <!-- runs the js from the top instead of the bottom "defer" -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
     <header>
-          <img src="images/your-photo.jpg" alt="Your Name" width="50" height="50">
-          <span>Your Name</span>        
-      </header>
+      <div class="header-center">
+        <img src="images/optimized_profile.jpg" alt="Emmanuel Ndem" width="50" height="50">
+        <span>Emmanuel Ndem</span>
+      </div>
+        <button id="menuToggle" aria-label="Toggle Menu">&#9776;</button>
+    </header>
     
-      <nav>
+       <!-- Navigation menu (toggles on small screens) -->
+      <nav class="hidden">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="chamber.html">Chamber</a></li>
           <li><a href="final.html">Final</a></li>
           <li><a href="join.html">Github Profile</a></li>
@@ -34,21 +38,48 @@
     
       <main>
         <h1>Home</h1>
-        <section>
-          <h2></h2>
-        </section>
-        <section>
-          <h2></h2>
-        </section>
-        <section>
-          <h2></h2>
-        </section>
+        <!-- Top two cards: Course Work & Location -->
+        <div class="card-grid">
+          <section>
+            <h2>Course Work</h2>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Calabar, Nigeria</h2>
+            <img src="images/download-10-1.jpg" alt="Calabar">
+            <p>The Calabar, Calabar Roundabout</p>
+          </section>
+        </div>
+
+          <!-- Certificate section with filter buttons and course buttons -->
+          <section class="cert-section">
+            <h2>Web and Computer Programming Certificate</h2>
+
+            <div class="filter-buttons">
+              <button>All</button>
+              <button>CSE</button>
+              <button>WDD</button>
+            </div>
+
+            <div class="cert-grid">
+              <button class="cse">CSE 110</button>
+              <button class="wdd">WDD 130</button>
+              <button class="cse">CSE 111</button>
+              <button class="wdd">CSE 210</button>
+              <button class="cse">WDD 131</button>
+              <button class="wdd">WDD 231</button>
+            </div>
+          </section>
       </main>
     
       <footer>
-        <p>&copy; <span id="currentyear"></span> Your Name, Cross River State, Nigeria</p>
+        <p>&copy; <span id="currentyear"></span> Emmanuel Ndem, Calabar, Nigeria</p>
         <p id="lastModified"></p>
       </footer>
 </body>
-
 </html>
