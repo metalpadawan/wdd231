@@ -98,3 +98,9 @@ section {
   border-radius: 6px;
   padding: 1rem;
 }
+
+#total-credits {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
