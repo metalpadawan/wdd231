@@ -1,3 +1,7 @@
+:root {
+  --darkgray: rgba(0, 0, 0, 0.3); /* Slightly deeper */
+}
+
 @media screen and (min-width: 640px) {
   nav ul {
     flex-direction: row;
@@ -51,7 +55,7 @@
   /* UPDATED: Header layout for image + name side by side */
   header {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
@@ -86,4 +90,11 @@
   .filter-buttons button {
     border-bottom: 2px solid black;
   }
+}
+
+section {
+  box-shadow: 0 6px 25px var(--darkgray); /* Increased blur and spread */
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 1rem;
 }
