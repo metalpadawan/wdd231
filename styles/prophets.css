@@ -1,0 +1,78 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto&display=swap');
+
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* ===== Page Header ===== */
+h1 {
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #3f3270;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #ccc;
+}
+
+/* ===== Cards Container ===== */
+#cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* ===== Individual Card Styling ===== */
+#cards section {
+  background-color: #d8d4f2;
+  border: 1px solid #7f78a4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ===== Prophet Name Heading ===== */
+#cards h2 {
+  font-family: 'Kalam', cursive;
+  font-size: 1.3rem;
+  color: #433a8b;
+  margin-bottom: 10px;
+}
+
+/* ===== Image Styling ===== */
+#cards img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Responsive Grid Layout ===== */
+@media (min-width: 600px) {
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  #cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
