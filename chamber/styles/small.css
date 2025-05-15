@@ -13,11 +13,37 @@ header, footer {
 
 .navigation {
   display: none;
+  flex-direction: column;
+  background-color: #004d40;
+  padding: 1rem;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  background-color: #004d40;
+  padding: 1rem;
+}
+
+.navigation.open {
+  display: flex;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
 }
 
 #menu {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: white; /* Or a bright color */
+  background: none;
+  border: none;
+  cursor: pointer;
 }
+
+
 
 main {
   padding: 1rem;
@@ -28,6 +54,23 @@ main {
   margin-bottom: 1rem;
 }
 
+.view-toggle button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #004d40;
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.view-toggle button:hover {
+  background: #00695c;
+}
+
+
 .directory.grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -35,17 +78,45 @@ main {
 }
 
 .directory.list .member-card {
-  display: block;
+  max-width: 90%;      /* Makes it narrower than grid view */
+  margin: 0 auto;       /* Center it */
+  font-size: 0.9rem;    /* Slightly smaller text */
+  padding: 0.75rem;     /* Tighter padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .member-card {
   border: 1px solid #ccc;
+  border-radius: 0.5rem;
   padding: 1rem;
   text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 🔹 Deeper base shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 🔹 More depth on hover */
 }
 
 .member-card img {
   width: 100%;
   max-width: 200px;
   height: auto;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.directory.grid .member-card {
+  width: 100%; /* Full width on small screens */
+}
+
+.navigation.show {
+  display: flex;
 }

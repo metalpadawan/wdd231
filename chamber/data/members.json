@@ -4,7 +4,7 @@
     "address": "12 Obong Rd, Calabar",
     "phone": "+234 800 111 2222",
     "website": "https://afritech.com",
-    "image": "afritech.jpg",
+    "image": "bluebonnet-logo.webp",
     "membership": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "45 Marian Rd, Calabar",
     "phone": "+234 800 333 4444",
     "website": "https://crosscafe.com",
-    "image": "cafe.jpg",
+    "image": "icode-logo.webp",
     "membership": 1
   },
   {
@@ -20,7 +20,7 @@
     "address": "101 Calabar South",
     "phone": "+234 800 555 6666",
     "website": "https://eyostudios.com",
-    "image": "eyo.jpg",
+    "image": "invoice-home-logo.webp",
     "membership": 2
   },
   {
@@ -28,7 +28,7 @@
     "address": "67 Bakassi Rd, Calabar",
     "phone": "+234 800 777 8888",
     "website": "https://greenfarms.com",
-    "image": "greenfarms.jpg",
+    "image": "origis-services-logo.webp",
     "membership": 3
   },
   {
@@ -36,7 +36,7 @@
     "address": "23 Gold Crescent, Calabar",
     "phone": "+234 800 999 0000",
     "website": "https://sunsetlodges.com",
-    "image": "lodge.jpg",
+    "image": "seton-logo.webp",
     "membership": 2
   },
   {
@@ -44,7 +44,7 @@
     "address": "78 Market Rd, Calabar",
     "phone": "+234 800 121 2121",
     "website": "https://calabarprints.com",
-    "image": "prints.jpg",
+    "image": "shop-lc-logo.webp",
     "membership": 1
   },
   {
@@ -52,7 +52,15 @@
     "address": "15 Tourism Blvd, Calabar",
     "phone": "+234 800 323 3434",
     "website": "https://tropicaltours.com",
-    "image": "tours.jpg",
+    "image": "spurs-logo.webp",
+    "membership": 2
+  },
+  {
+    "name": "La Shakara",
+    "address": "25 MCC, Calabar",
+    "phone": "+234 800 323 3434",
+    "website": "https://lashakara.com",
+    "image": "vrbo-logo.webp",
     "membership": 2
   }
 ]
