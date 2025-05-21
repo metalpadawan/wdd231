@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Enrollment</title>
+  <link rel="stylesheet" href="styles/modules.css">
+</head>
+<body>
+  <div class="container">
+  <h1>Web Frontend Development I</h1>
+  <h2>WDD231</h2>
+
+  <div class="selector">
+    <label for="sectionNumber">Choose a section:</label>
+    <select id="sectionNumber"></select>
+
+    <button id="enrollStudent">Enroll a Student</button>
+    <button id="dropStudent">Drop a Student</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Enrolled</th>
+        <th>Instructor</th>
+      </tr>
+    </thead>
+    <tbody id="sections"></tbody>
+  </table>
+</div>
+
+
+  <script type="module" src="scripts/modules.mjs"></script>
+</body>
+</html>
