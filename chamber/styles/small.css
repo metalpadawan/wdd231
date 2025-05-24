@@ -43,8 +43,6 @@ header, footer {
   cursor: pointer;
 }
 
-
-
 main {
   padding: 1rem;
 }
@@ -69,7 +67,6 @@ main {
 .view-toggle button:hover {
   background: #00695c;
 }
-
 
 .directory.grid {
   display: grid;
@@ -119,4 +116,113 @@ body {
 
 .navigation.show {
   display: flex;
+}
+
+.section-box {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cta-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #004d40;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.weather-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.weather-wrapper {
+  flex-direction: row;
+}
+
+.spotlight {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.spotlight-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.spotlight-card {
+  flex: 0 0 auto;
+  min-width: 280px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.spotlight-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.spotlight-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.spotlight-card .membership-level {
+  font-weight: bold;
+  color: #00695c;
+  margin-top: 0.5rem;
+}
+
+.row-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.section-box {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.section-box h2 {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem;
+  font-size: 1.1rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
