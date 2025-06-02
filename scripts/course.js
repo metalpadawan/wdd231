@@ -65,6 +65,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const certGrid = document.querySelector(".cert-grid");
   const creditOutput = document.getElementById("total-credits");
   const filterButtons = document.querySelectorAll(".filter-buttons button");
+  const courseDetails = document.getElementById("course_details"); // Ensure this matches your <dialog> ID
+
+  function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+      <button id="closeModal" type="button">❌</button>
+      <h2>${course.subject} ${course.number}</h2>
+      <h3>${course.title}</h3>
+      <p><strong>Credits</strong>: ${course.credits}</p>
+      <p><strong>Certificate</strong>: ${course.certificate}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+
+    const closeBtn = document.getElementById("closeModal");
+    closeBtn.addEventListener("click", () => {
+      courseDetails.close();
+    });
+
+    courseDetails.addEventListener("click", (e) => {
+      const dialogDimensions = courseDetails.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        courseDetails.close();
+      }
+    });
+  }
 
   function renderCourses(filter) {
     certGrid.innerHTML = "";
@@ -73,23 +106,31 @@ document.addEventListener("DOMContentLoaded", () => {
       filter === "all" || course.subject.toLowerCase() === filter
     );
 
-    filtered.forEach(course => {
-      const btn = document.createElement("button");
-      btn.textContent = `${course.subject} ${course.number}`;
-      btn.classList.add(course.subject.toLowerCase());
+      filtered.forEach(course => {
+    const btn = document.createElement("button");
+    btn.textContent = `${course.subject} ${course.number}`;
+    btn.setAttribute("type", "button"); // ✅ prevent submit behavior
+    btn.classList.add(course.subject.toLowerCase());
 
-      if (course.completed) {
-        btn.classList.add("completed");
-        btn.title = `${course.title} - Completed`;
-      } else {
-        btn.classList.add("incomplete");
-        btn.title = `${course.title} - In Progress`;
-      }
+    if (course.completed) {
+      btn.classList.add("completed");
+      btn.title = `${course.title} - Completed`;
+    } else {
+      btn.classList.add("incomplete");
+      btn.title = `${course.title} - In Progress`;
+    }
 
-      certGrid.appendChild(btn);
+    // ✅ This is the important part
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();     // Prevent scrolling
+      e.stopPropagation();    // Prevent bubbling up to parent elements
+      displayCourseDetails(course);
     });
 
-    // Total completed credits using reduce
+    certGrid.appendChild(btn);
+    });
+
+    // Total completed credits
     const completedCredits = filtered.reduce((sum, course) => {
       return course.completed ? sum + course.credits : sum;
     }, 0);

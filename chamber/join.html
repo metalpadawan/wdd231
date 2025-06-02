@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thank you for applying to the Calabar Chamber of Commerce" />
+  <meta name="author" content="Emmanuel Ndem" />
+  <meta property="og:title" content="Thank You | Calabar Chamber" />
+  <meta property="og:description" content="Confirmation page for new chamber members" />
+  <meta property="og:image" content="images/meta/optimized_profile_og.webp" />
+  <meta property="og:url" content="https://metalpadawan.github.io/wdd231/chamber/thankyou.html" />
+  <title>Thank You | Calabar Chamber</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <h1>Calabar Chamber of Commerce</h1>
+    <button id="menu">☰</button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <h2>Join the Chamber</h2>
+
+  <form method="get" action="thankyou.html">
+    <label title="First Name">
+      First Name:
+      <input type="text" name="fname" required autocomplete="given-name" title="Enter your first name" />
+    </label>
+
+    <label title="Last Name">
+      Last Name:
+      <input type="text" name="lname" required autocomplete="family-name" title="Enter your last name" />
+    </label>
+
+    <label title="Organizational Title">
+      Your Title:
+      <input type="text" name="orgtitle" autocomplete="organization-title" title="Enter your job title (at least 7 characters)" pattern="[A-Za-z\s\-]{7,}" />
+    </label>
+
+    <label title="Email Address">
+      Email:
+      <input type="email" name="email" required autocomplete="email" title="Enter your email address" placeholder="you@example.com" />
+    </label>
+
+    <label title="Mobile Phone Number">
+      Mobile Phone:
+      <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number" />
+    </label>
+
+    <label title="Business Name">
+      Organization:
+      <input type="text" name="organization" required autocomplete="organization" title="Enter your business or organization name" />
+    </label>
+
+    <label title="Select Membership Level">
+      Membership Level:
+      <select name="membership" required title="Select your membership level">
+        <option value="">-- Select a level --</option>
+        <option value="NP Membership">NP Membership</option>
+        <option value="Bronze Membership">Bronze Membership</option>
+        <option value="Silver Membership">Silver Membership</option>
+        <option value="Gold Membership">Gold Membership</option>
+      </select>
+    </label>
+
+    <label title="Describe your organization">
+      Description:
+      <textarea name="description" title="Briefly describe your business or organization"></textarea>
+    </label>
+
+    <input type="hidden" name="timestamp" id="timestamp" />
+
+    <input type="submit" value="Apply for Membership" />
+  </form>
+
+  <section class="membership-cards">
+    <article class="card np">
+      <h3>NP Membership</h3>
+      <p>Free for non-profits</p>
+      <a href="#modal-np">More Info</a>
+    </article>
+
+    <article class="card bronze">
+      <h3>Bronze Membership</h3>
+      <p>Basic benefits</p>
+      <a href="#modal-bronze">More Info</a>
+    </article>
+
+    <article class="card silver">
+      <h3>Silver Membership</h3>
+      <p>More visibility</p>
+      <a href="#modal-silver">More Info</a>
+    </article>
+
+    <article class="card gold">
+      <h3>Gold Membership</h3>
+      <p>Maximum benefits</p>
+      <a href="#modal-gold">More Info</a>
+    </article>
+  </section>
+
+  <!-- Membership Info Modals -->
+  <dialog id="modal-np">
+    <h4>NP Membership</h4>
+    <p>No cost. Access to community events, monthly newsletters.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+  </dialog>
+
+  <dialog id="modal-bronze">
+    <h4>Bronze Membership</h4>
+    <p>Includes training workshops, business directory listing, and event access.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+  </dialog>
+
+  <dialog id="modal-silver">
+    <h4>Silver Membership</h4>
+    <p>All Bronze benefits + homepage spotlight & advertising bundle.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+  </dialog>
+
+  <dialog id="modal-gold">
+    <h4>Gold Membership</h4>
+    <p>All Silver benefits + event discounts, priority listings, premium networking.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+  </dialog>
+</main>
+
+
+  <footer>
+    <p>Contact: emmanuelndem9@gmail.com | +2349031653153 | Emmanuel Ndem</p>
+    <p>&copy; <span id="year"></span> Calabar Chamber | WDD 231 | Last Updated: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
