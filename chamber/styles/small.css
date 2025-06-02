@@ -11,19 +11,30 @@ header, footer {
   text-align: center;
 }
 
-.navigation {
-  display: none;
-  flex-direction: column;
-  background-color: #004d40;
-  padding: 1rem;
-}
 
 .navigation {
   display: none;
   flex-direction: column;
-  background-color: #004d40;
-  padding: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
 }
+
+.navigation li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  border-top: 1px solid #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation li a:hover {
+  background-color: #555;
+  color: #ffd700; /* gold/yellow highlight */
+}
+
 
 .navigation.open {
   display: flex;
