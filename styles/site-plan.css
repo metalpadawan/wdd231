@@ -1,0 +1,33 @@
+/* site-plan.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fdfdfd;
+  color: #111;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 2px solid #000;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+}
+
+h1, h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.wireframe img {
+  max-width: 100%;
+  border: 1px solid #999;
+  display: block;
+  margin-top: 1rem;
+}
+
+code {
+  background-color: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
