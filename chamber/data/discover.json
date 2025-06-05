@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Calabar Museum",
+    "address": "Old Residency Rd, Calabar",
+    "description": "A historical museum showcasing colonial artifacts and the slave trade history of Calabar.",
+    "cost": "₦500",
+    "photo": "images/residency_museum_calabar_transcorp_hotel.webp"
+  },
+  {
+    "name": "Drill Monkey Sanctuary",
+    "address": "CERCOPAN, Calabar",
+    "description": "A conservation center for endangered Drill monkeys with guided educational tours.",
+    "cost": "₦1,000",
+    "photo": "images/238-1b3u3635_rt16.webp"
+  },
+  {
+    "name": "Tinapa Resort",
+    "address": "Tinapa Free Zone, Calabar",
+    "description": "An expansive resort offering leisure, retail, and business facilities along the Calabar River.",
+    "cost": "Free Entry (activities vary)",
+    "photo": "images/tinapa.webp"
+  },
+  {
+    "name": "Slave History Museum",
+    "address": "Marina Resort Complex, Calabar",
+    "description": "A museum chronicling the harrowing history of the transatlantic slave trade in Calabar.",
+    "cost": "₦500",
+    "photo": "images/Slavesinaship.webp"
+  },
+  {
+    "name": "Kwa Falls",
+    "address": "Akamkpa LGA, Cross River State",
+    "description": "A scenic waterfall in a tropical rainforest, perfect for picnics and nature walks.",
+    "cost": "₦700",
+    "photo": "images/the-waterfall-at-the.webp"
+  },
+  {
+    "name": "Marina Resort",
+    "address": "Marina Road, Calabar",
+    "description": "A riverfront resort with boat rides, eateries, and recreational activities for families.",
+    "cost": "₦1,000 (boat ride extra)",
+    "photo": "images/960px-Marina_Resort,_Calabar.webp"
+  },
+  {
+    "name": "Calabar Botanical Garden",
+    "address": "Calabar South, Calabar",
+    "description": "A serene garden with diverse plant species and shaded walkways for nature lovers.",
+    "cost": "₦300",
+    "photo": "images/botanical.webp"
+  },
+  {
+    "name": "Obudu Mountain Resort",
+    "address": "Obanliku LGA, Cross River",
+    "description": "A mountain-top resort with breathtaking views, cable cars, and cool climate.",
+    "cost": "₦2,000",
+    "photo": "images/experience-Obudu-Mountain-Resort-Tour-hotel-view.webp"
+  },
+  {
+    "name": "Millennium Park",
+    "address": "Calabar Municipality, Calabar",
+    "description": "An urban park with walking paths, playgrounds, and open space for community events.",
+    "cost": "Free",
+    "photo": "images/Mpark.webp"
+  },
+  {
+    "name": "Calabar Carnival Arena",
+    "address": "Carnival Square, Calabar",
+    "description": "The main venue for the annual Calabar Carnival, Africa's biggest street party.",
+    "cost": "Varies (Free to Spectate)",
+    "photo": "images/carnival.webp"
+  }
+]

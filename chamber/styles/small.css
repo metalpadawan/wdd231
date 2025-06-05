@@ -1,7 +1,9 @@
+/* Base Reset & Typography */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f8f8f8;
 }
 
 header, footer {
@@ -11,14 +13,26 @@ header, footer {
   text-align: center;
 }
 
+/* Navigation */
+#menu {
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 .navigation {
   display: none;
   flex-direction: column;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   background-color: #333;
+}
+
+.navigation.open {
+  display: flex;
 }
 
 .navigation li a {
@@ -32,28 +46,10 @@ header, footer {
 
 .navigation li a:hover {
   background-color: #555;
-  color: #ffd700; /* gold/yellow highlight */
+  color: #ffd700;
 }
 
-
-.navigation.open {
-  display: flex;
-}
-
-.navigation a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 0;
-}
-
-#menu {
-  font-size: 2rem;
-  color: white; /* Or a bright color */
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
+/* Main Layout */
 main {
   padding: 1rem;
 }
@@ -79,17 +75,22 @@ main {
   background: #00695c;
 }
 
+/* Directory Styles */
 .directory.grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
+.directory.grid .member-card {
+  width: 100%;
+}
+
 .directory.list .member-card {
-  max-width: 90%;      /* Makes it narrower than grid view */
-  margin: 0 auto;       /* Center it */
-  font-size: 0.9rem;    /* Slightly smaller text */
-  padding: 0.75rem;     /* Tighter padding */
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -102,13 +103,13 @@ main {
   padding: 1rem;
   text-align: center;
   background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 🔹 Deeper base shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .member-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 🔹 More depth on hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .member-card img {
@@ -117,25 +118,7 @@ main {
   height: auto;
 }
 
-body {
-  background-color: #f8f8f8;
-}
-
-.directory.grid .member-card {
-  width: 100%; /* Full width on small screens */
-}
-
-.navigation.show {
-  display: flex;
-}
-
-.section-box {
-  background-color: #e0e0e0;
-  padding: 1rem;
-  border-radius: 4px;
-  text-align: left;
-}
-
+/* Hero Image Section */
 .hero {
   position: relative;
   overflow: hidden;
@@ -160,6 +143,7 @@ body {
   text-decoration: none;
 }
 
+/* Weather Section */
 .weather-wrapper {
   display: flex;
   flex-direction: column;
@@ -167,23 +151,12 @@ body {
   margin: 1rem 0;
 }
 
-.weather-wrapper {
-  flex-direction: row;
-}
-
+/* Spotlight Section */
 .spotlight {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2rem;
-}
-
-.spotlight-card {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .spotlight-card {
@@ -215,17 +188,12 @@ body {
   margin-top: 0.5rem;
 }
 
-.row-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
+/* Section Box */
 .section-box {
   background-color: #e0e0e0;
   padding: 1rem;
   border-radius: 4px;
+  text-align: left;
 }
 
 .section-box h2 {
@@ -238,6 +206,7 @@ body {
   border-top-right-radius: 4px;
 }
 
+/* Buttons */
 .button {
   display: inline-block;
   margin-top: 1rem;
@@ -248,10 +217,12 @@ body {
   border-radius: 6px;
   transition: background-color 0.3s;
 }
+
 .button:hover {
   background-color: #1a242f;
 }
 
+/* Membership Cards */
 .membership-cards {
   display: flex;
   flex-wrap: wrap;
@@ -280,4 +251,21 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Discover Page Grid for Small Screens */
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8"
+    "card9"
+    "card10";
 }
