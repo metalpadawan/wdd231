@@ -19,14 +19,18 @@
 <body>
   <header>
   <h1>Calabar Chamber of Commerce</h1>
-  <button id="menu" onclick="toggleMenu()">☰</button>
-  <ul class="navigation" id="nav">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Discover</a></li>
-    <li><a href="#">Directory</a></li>
-    <li><a href="#">Join</a></li>
-  </ul>
-</header>
+  <button id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
+
+    <nav id="main-nav" role="navigation">
+      <ul class="navigation" id="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
 
   <main>
     <h2>Discover Calabar</h2>
@@ -46,18 +50,16 @@
 
   <script type="module" src="scripts/discover.js"></script>
   <script>
-  function toggleMenu() {
-    document.getElementById("nav").classList.toggle("open");
-  }
+    function toggleMenu() {
+      const nav = document.getElementById("nav");
+      const menuButton = document.getElementById("menu");
+      nav.classList.toggle("open");
 
-  // Optional: Close menu when link clicked (mobile UX improvement)
-  document.querySelectorAll("#nav a").forEach(link =>
-    link.addEventListener("click", () => {
-      document.getElementById("nav").classList.remove("open");
-    })
-  );
-</script>
-
+      // Update aria-expanded
+      const expanded = nav.classList.contains("open");
+      menuButton.setAttribute("aria-expanded", expanded);
+    }
+  </script>
 
 </body>
 </html>
