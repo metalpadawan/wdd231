@@ -18,16 +18,15 @@
 </head>
 <body>
   <header>
-    <h1>Calabar Chamber of Commerce</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html" class="active">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1>Calabar Chamber of Commerce</h1>
+  <button id="menu" onclick="toggleMenu()">☰</button>
+  <ul class="navigation" id="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Discover</a></li>
+    <li><a href="#">Directory</a></li>
+    <li><a href="#">Join</a></li>
+  </ul>
+</header>
 
   <main>
     <h2>Discover Calabar</h2>
@@ -46,5 +45,19 @@
   </script>
 
   <script type="module" src="scripts/discover.js"></script>
+  <script>
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("open");
+  }
+
+  // Optional: Close menu when link clicked (mobile UX improvement)
+  document.querySelectorAll("#nav a").forEach(link =>
+    link.addEventListener("click", () => {
+      document.getElementById("nav").classList.remove("open");
+    })
+  );
+</script>
+
+
 </body>
 </html>

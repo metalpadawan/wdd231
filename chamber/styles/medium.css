@@ -8,4 +8,29 @@
       "card7 card8"
       "card9 card10";
   }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+  }
+
+  .navigation li {
+    margin: 0 1rem;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation li a {
+    border-top: none;
+    padding: 0.75rem 1rem;
+  }
 }
+
