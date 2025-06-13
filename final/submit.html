@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Submit your indie game to the Indie Game Vault." />
+  <meta name="author" content="Emmanuel Ndem" />
+  <meta property="og:title" content="Welcome to the Indie Game Vault" />
+  <meta property="og:description" content="Submit page" />
+  <meta property="og:image" content="https://metalpadawan.github.io/wdd231/final/images/optimized_profile_og.webp" />
+  <meta property="og:url" content="https://metalpadawan.github.io/wdd231/final/directory.html" />
+  <title>Submit a Game | Indie Game Vault</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+</head>
+<body>
+  <header>
+    <h1>Indie Game Vault</h1>
+    <nav>
+      <!-- Navigation content populated via JS -->
+      <button id="menu" aria-label="Toggle Navigation Menu">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="vault.html">Vault</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Submit Your Indie Game</h2>
+    <form id="gameForm">
+      <label for="title">Game Title</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="developer">Developer</label>
+      <input type="text" id="developer" name="developer" required />
+
+      <label for="releaseDate">Release Date</label>
+      <input type="date" id="releaseDate" name="releaseDate" required />
+
+      <label for="platforms">Platforms</label>
+      <input type="text" id="platforms" name="platforms" placeholder="e.g. PC, Switch" required />
+
+      <label for="genre">Genre</label>
+      <input type="text" id="genre" name="genre" required />
+
+      <label for="description">Short Description</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="imageURL">Image URL</label>
+      <input type="url" id="imageURL" name="imageURL" placeholder="http://..." required />
+
+      <button type="submit">Submit Game</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Indie Game Vault</p>
+  </footer>
+
+  <script src="scripts/navigation.js" type="module" defer></script>
+  <script src="scripts/date.js" type="module" defer></script>
+  <script src="scripts/form.js" type="module" defer></script>
+</body>
+</html>

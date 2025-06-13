@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Indie Game Vault - Discover and submit indie games" />
+  <meta name="author" content="Emmanuel Ndem" />
+  <meta property="og:title" content="Welcome to the Indie Game Vault" />
+  <meta property="og:description" content="Home page" />
+  <meta property="og:image" content="https://metalpadawan.github.io/wdd231/final/images/optimized_profile_og.webp" />
+  <meta property="og:url" content="https://metalpadawan.github.io/wdd231/final/directory.html" />
+  <title>Indie Game Vault</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <h1>Indie Game Vault</h1>
+    <nav>
+      <button id="menu" aria-label="Toggle Navigation Menu">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="vault.html">Vault</a></li>
+        <li><a href="submit.html">Submit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to the Vault</h2>
+      <p>Discover and celebrate indie games from around the world.</p>
+    </section>
+
+    <section class="spotlight">
+      <h2>Featured Games</h2>
+      <div class="game-grid" id="featuredGames">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Indie Game Vault</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+    <p><a href="#">Watch the Demo</a></p>
+  </footer>
+
+  <script src="scripts/navigation.js" type="module" defer></script>
+  <script src="scripts/date.js" type="module" defer></script>
+  <script src="scripts/modal.js" type="module" defer></script>
+  <script src="scripts/games.js" type="module" defer></script>
+  <script src="scripts/main.js" type="module" defer></script>
+
+</body>
+</html>

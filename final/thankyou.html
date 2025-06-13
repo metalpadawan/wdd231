@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thank you for your game submission!" />
+  <meta name="author" content="Emmanuel Ndem" />
+  <meta property="og:title" content="Thank You | Indie Game Vault" />
+  <meta property="og:description" content="Appreciation page" />
+  <meta property="og:image" content="https://metalpadawan.github.io/wdd231/final/images/optimized_profile_og.webp" />
+  <meta property="og:url" content="https://metalpadawan.github.io/wdd231/final/directory.html" />
+  <title>Thank You | Indie Game Vault</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+</head>
+<body>
+  <header>
+    <h1>Indie Game Vault</h1>
+    <nav>
+      <!-- Navigation content populated via JS -->
+       <button id="menu" aria-label="Toggle Navigation Menu">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="vault.html">Vault</a></li>
+        <li><a href="submit.html">Submit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Thank You!</h2>
+    <p>Your game has been successfully submitted to the vault.</p>
+
+    <section id="submittedGame">
+      <!-- Submitted game data will display here -->
+    </section>
+
+    <a href="index.html" class="button">Return to Home</a>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Indie Game Vault</p>
+  </footer>
+
+  <script src="scripts/navigation.js" type="module" defer></script>
+  <script src="scripts/date.js" type="module" defer></script>
+  <script src="scripts/thankyou.js" type="module" defer></script>
+</body>
+</html>
