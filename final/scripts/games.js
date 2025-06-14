@@ -1,57 +1,44 @@
 // scripts/games.js
-import { openModal } from './modal.js';
+const gameContainer = document.querySelector("#game-cards");
 
-const gameGrid = document.querySelector('#gameGrid');
+async function fetchGames() {
+  try {
+    const response = await fetch("data/games.json");
 
-// Example local game data
-const games = [
-  {
-    id: 1,
-    title: 'Voidwalker',
-    image: 'images/voidwalker.webp',
-    genre: 'Sci-Fi Adventure',
-    description: 'Explore derelict ships and uncover mysteries in deep space.',
-    developer: 'LunaSoft',
-    year: 2023
-  },
-  {
-    id: 2,
-    title: 'PixelQuest',
-    image: 'images/pixelquest.webp',
-    genre: 'Retro Platformer',
-    description: 'A throwback to the 8-bit era with tight controls and pixel art.',
-    developer: 'RetroByte',
-    year: 2024
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    displayGames(data.games);
+  } catch (error) {
+    console.error("Error fetching games:", error);
+    gameContainer.innerHTML = "<p>Failed to load games. Please try again later.</p>";
   }
-  // Add more games as needed
-];
-
-function createGameCard(game) {
-  const card = document.createElement('div');
-  card.classList.add('game-card');
-  card.setAttribute('tabindex', '0');
-  card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', `View details for ${game.title}`);
-
-  card.innerHTML = `
-    <img src="${game.image}" alt="${game.title} Cover Art" loading="lazy">
-    <h3>${game.title}</h3>
-    <p>${game.genre}</p>
-  `;
-
-  card.addEventListener('click', () => openModal(game));
-  card.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') openModal(game);
-  });
-
-  return card;
 }
 
-function renderGames() {
-  games.forEach(game => {
-    const card = createGameCard(game);
-    gameGrid.appendChild(card);
+function displayGames(games) {
+  gameContainer.innerHTML = ""; // Clear if any
+
+  games.forEach((game) => {
+    const card = document.createElement("div");
+    card.classList.add("game-card");
+
+    card.innerHTML = `
+      <img src="${game.image}" alt="${game.title} Screenshot" loading="lazy" />
+      <div class="game-info">
+        <h3>${game.title}</h3>
+        <p><strong>Genre:</strong> ${game.genre}</p>
+        <p><strong>Platform:</strong> ${game.platform}</p>
+        <p><strong>Developer:</strong> ${game.developer}</p>
+        <button class="details-btn" data-id="${game.id}">View Details</button>
+      </div>
+    `;
+
+    gameContainer.appendChild(card);
   });
+
+  // Optional: Hook up modal.js here to activate buttons
 }
 
-document.addEventListener('DOMContentLoaded', renderGames);
+fetchGames();

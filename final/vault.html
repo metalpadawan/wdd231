@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
@@ -15,7 +16,8 @@
     <nav>
       <button id="menu" aria-label="Menu">☰</button>
       <ul class="navigation">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="vault.html" class="active">Vault</a></li>
         <li><a href="submit.html">Submit a Game</a></li>
       </ul>
     </nav>
@@ -27,32 +29,38 @@
       <p>Uncover hidden gems in the world of independent games.</p>
     </section>
 
+    <!-- Genre Filter -->
     <section id="gameFilter">
       <label for="genreSelect">Filter by Genre:</label>
       <select id="genreSelect">
         <option value="all">All</option>
-        <!-- Dynamic options will be inserted here -->
+        <!-- JS will populate additional options -->
       </select>
     </section>
 
-    <section id="gameGallery" class="gallery">
-      <!-- Dynamic game cards will be injected here -->
+    <!-- Game Cards -->
+    <section id="games-section">
+      <h2>Indie Game Vault</h2>
+      <div id="game-cards" class="card-container">
+        <!-- JS will inject cards here -->
+      </div>
     </section>
 
-    <div id="modal" class="modal hidden">
+    <!-- Modal for Game Details -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-content">
-        <button class="close-btn" aria-label="Close">&times;</button>
+        <button class="close-btn" aria-label="Close Modal">&times;</button>
         <div id="modalDetails">
-          <!-- Modal content will be injected here -->
+          <h3 id="modalTitle"></h3>
+          <img id="modalImage" alt="" />
+          <p id="modalDescription"></p>
+          <p><strong>Genre:</strong> <span id="modalGenre"></span></p>
+          <p><strong>Platform:</strong> <span id="modalPlatform"></span></p>
+          <p><strong>Developer:</strong> <span id="modalDeveloper"></span></p>
+          <p><a id="modalWebsite" href="#" target="_blank" rel="noopener">Official Website</a></p>
         </div>
       </div>
     </div>
-
-    <section id="games-section">
-      <h2>Indie Game Vault</h2>
-      <div id="game-cards" class="card-container"></div>
-    </section>
-
   </main>
 
   <footer>
@@ -61,7 +69,7 @@
     <p><a href="https://example.com/demo" target="_blank">Demo Video</a></p>
   </footer>
 
-  <!-- JavaScript files -->
+  <!-- Scripts -->
   <script src="scripts/main.js" type="module" defer></script>
   <script src="scripts/navigation.js" type="module" defer></script>
   <script src="scripts/date.js" type="module" defer></script>
