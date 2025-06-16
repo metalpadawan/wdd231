@@ -1,16 +1,16 @@
-// main.js
-import { loadGames, renderGames } from './modules/games.js';
-import { openGameModal, initModal } from './modules/modal.js';
-import { loadSubmittedGames } from './modules/form.js';
+export function renderGames(games, container) {
+  container.innerHTML = "";
 
-document.addEventListener('DOMContentLoaded', async () => {
-  initModal();
-  const container = document.querySelector('#gameList');
-
-  // Load default + user-submitted games
-  const defaultGames = await loadGames();
-  const submittedGames = loadSubmittedGames();
-  const allGames = [...defaultGames, ...submittedGames];
-
-  renderGames(allGames, container);
-});
+  games.forEach((game) => {
+    const card = document.createElement("div");
+    card.classList.add("game-card");
+    card.innerHTML = `
+      <img src="${game.imageURL}" alt="${game.title} Screenshot" loading="lazy">
+      <h3>${game.title}</h3>
+      <p><strong>Genre:</strong> ${game.genre}</p>
+      <p><strong>Platforms:</strong> ${game.platforms}</p>
+      <p><strong>Release:</strong> ${game.releaseDate}</p>
+    `;
+    container.appendChild(card);
+  });
+}

@@ -6,7 +6,7 @@ games.forEach(game => {
   card.classList.add('game-card');
 
   card.innerHTML = `
-    <img src="${game.imageURL}" alt="Cover of ${game.title}">
+    <img src="${game.imageURL}" alt="Cover of ${game.title}" loading="lazy" />
     <h3>${game.title}</h3>
     <p><strong>Developer:</strong> ${game.developer}</p>
     <p><strong>Genre:</strong> ${game.genre}</p>

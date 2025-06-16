@@ -1,5 +1,4 @@
 // scripts/thankyou.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("submittedGame");
   const game = JSON.parse(localStorage.getItem("submittedGame"));
