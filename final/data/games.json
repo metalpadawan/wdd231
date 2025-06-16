@@ -129,6 +129,72 @@
       "tags": ["thriller", "mystery", "suspense", "story-rich"],
       "website": "https://redwire.studio/hollowsignal",
       "trailer": "https://www.youtube.com/watch?v=hollowsignal-trailer"
-    }
+    },
+
+    {
+      "id": 11,
+      "title": "Hollow Knight",
+      "image": "images/hollowknight.webp",
+      "genre": "Metroidvania",
+      "description": "Explore a vast, ruined kingdom of insects and heroes in this hand-drawn action platformer.",
+      "developer": "Team Cherry",
+      "year": 2017,
+      "platform": "PC, Switch, PS4, Xbox",
+      "tags": ["platformer", "action", "exploration", "2D"],
+      "website": "https://www.hollowknight.com/",
+      "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4"
+    },
+    {
+      "id": 12,
+      "title": "Super Mario Bros.",
+      "image": "images/mario.webp",
+      "genre": "Platformer",
+      "description": "Join Mario on a classic adventure to save Princess Peach from Bowser.",
+      "developer": "Nintendo",
+      "year": 1985,
+      "platform": "NES, Switch Online",
+      "tags": ["platformer", "classic", "2D", "arcade"],
+      "website": "https://www.nintendo.com/",
+      "trailer": "https://www.youtube.com/watch?v=eGD2F5-fk6E"
+    },
+    {
+      "id": 13,
+      "title": "Contra",
+      "image": "images/contra.webp",
+      "genre": "Run and Gun",
+      "description": "Blast through alien enemies in one of the most iconic co-op shooters ever made.",
+      "developer": "Konami",
+      "year": 1987,
+      "platform": "NES, Arcade",
+      "tags": ["action", "shooter", "classic", "co-op"],
+      "website": "https://www.konami.com/games/contra/",
+      "trailer": "https://www.youtube.com/watch?v=wE_x5MKl7HM"
+    },
+    {
+      "id": 14,
+      "title": "Tetris",
+      "image": "images/tetris.webp",
+      "genre": "Puzzle",
+      "description": "Rotate and stack falling blocks in the timeless tile-matching puzzle game.",
+      "developer": "Alexey Pajitnov",
+      "year": 1984,
+      "platform": "Multiple",
+      "tags": ["puzzle", "classic", "tile-matching", "arcade"],
+      "website": "https://tetris.com/",
+      "trailer": "https://www.youtube.com/watch?v=4pY3hlQEOc0"
+    },
+    {
+      "id": 15,
+      "title": "Snake",
+      "image": "images/snake.webp",
+      "genre": "Arcade Classic",
+      "description": "Guide the snake to eat food and grow longer without hitting the walls or itself.",
+      "developer": "Nokia / Various",
+      "year": 1997,
+      "platform": "Mobile, Web",
+      "tags": ["arcade", "classic", "retro", "snake"],
+      "website": "https://en.wikipedia.org/wiki/Snake_(video_game_genre)",
+      "trailer": "https://www.youtube.com/watch?v=gm59j3yIQuM"
+    } 
   ]
 }
