@@ -1,25 +1,25 @@
-// scripts/form.js
+document.querySelector('#gameForm').addEventListener('submit', (e) => {
+  e.preventDefault();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("gameForm");
+  const game = {
+    title: document.querySelector('#title').value.trim(),
+    developer: document.querySelector('#developer').value.trim(),
+    releaseDate: document.querySelector('#releaseDate').value,
+    platforms: document.querySelector('#platforms').value.trim(),
+    genre: document.querySelector('#genre').value.trim(),
+    description: document.querySelector('#description').value.trim(),
+    imageURL: document.querySelector('#imageURL').value.trim(),
+    submittedAt: new Date().toISOString()
+  };
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  // Store the latest submission for thankyou.html
+  localStorage.setItem('submittedGame', JSON.stringify(game));
 
-    const gameData = {
-      title: form.title.value.trim(),
-      developer: form.developer.value.trim(),
-      releaseDate: form.releaseDate.value,
-      platforms: form.platforms.value.trim(),
-      genre: form.genre.value.trim(),
-      description: form.description.value.trim(),
-      imageURL: form.imageURL.value.trim()
-    };
+  // Append to the list of all submitted games
+  const games = JSON.parse(localStorage.getItem('submittedGames')) || [];
+  games.push(game);
+  localStorage.setItem('submittedGames', JSON.stringify(games));
 
-    // Store in localStorage for thankyou.html to retrieve
-    localStorage.setItem("submittedGame", JSON.stringify(gameData));
-
-    // Redirect to thank you page
-    window.location.href = "thankyou.html";
-  });
+  // Redirect to thank you page
+  window.location.href = 'thankyou.html';
 });

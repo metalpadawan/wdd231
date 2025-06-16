@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Voidwalker",
-      "image": "images/voidwalker.webp",
+      "image": "images/void.webp",
       "genre": "Sci-Fi Adventure",
       "description": "Explore derelict ships and uncover mysteries in deep space.",
       "developer": "LunaSoft",
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "title": "PixelQuest",
-      "image": "images/pixelquest.webp",
+      "image": "images/8-bit.webp",
       "genre": "Retro Platformer",
       "description": "A throwback to the 8-bit era with tight controls and pixel art.",
       "developer": "RetroByte",
@@ -29,7 +29,7 @@
     {
       "id": 3,
       "title": "Neon Drift",
-      "image": "images/neondrift.webp",
+      "image": "images/drive.webp",
       "genre": "Cyber Racing",
       "description": "High-speed neon-lit races through dystopian cityscapes.",
       "developer": "SynthSpeed",
@@ -42,7 +42,7 @@
     {
       "id": 4,
       "title": "Shadow Grove",
-      "image": "images/shadowgrove.webp",
+      "image": "images/shadow.webp",
       "genre": "Mystery Puzzle",
       "description": "Unravel the secrets of a haunted forest in this eerie puzzle game.",
       "developer": "DarkRoot Studios",
@@ -55,7 +55,7 @@
     {
       "id": 5,
       "title": "Bit Brawler",
-      "image": "images/bitbrawler.webp",
+      "image": "images/bit.webp",
       "genre": "Fighting",
       "description": "Fast-paced pixelated brawler with local co-op and crazy combos.",
       "developer": "Punchbyte",
@@ -68,7 +68,7 @@
     {
       "id": 6,
       "title": "Echoes of the Deep",
-      "image": "images/echoes.webp",
+      "image": "images/deep.webp",
       "genre": "Underwater Horror",
       "description": "Dive into the abyss and face your fears in a deep-sea horror experience.",
       "developer": "Abyss Interactive",
@@ -81,7 +81,7 @@
     {
       "id": 7,
       "title": "Chrono Fields",
-      "image": "images/chronofields.webp",
+      "image": "images/chrono.webp",
       "genre": "Time Travel RPG",
       "description": "Manipulate time to alter your destiny in this pixel-based RPG.",
       "developer": "Clockwise Games",
@@ -94,7 +94,7 @@
     {
       "id": 8,
       "title": "Synthwave City",
-      "image": "images/synthwavecity.webp",
+      "image": "images/sunset.webp",
       "genre": "Open World",
       "description": "Explore a neon-drenched city filled with secrets and synth beats.",
       "developer": "FutureWorld Devs",
@@ -107,7 +107,7 @@
     {
       "id": 9,
       "title": "Bloom & Blight",
-      "image": "images/bloomblight.webp",
+      "image": "images/bloom.webp",
       "genre": "Card Strategy",
       "description": "Deck-building meets a world torn by war and magic.",
       "developer": "Petal Games",
@@ -120,7 +120,7 @@
     {
       "id": 10,
       "title": "Hollow Signal",
-      "image": "images/hollowsignal.webp",
+      "image": "images/hollow.webp",
       "genre": "Psychological Thriller",
       "description": "Decode cryptic signals and uncover hidden truths in a digital nightmare.",
       "developer": "RedWire Studio",
